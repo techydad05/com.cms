@@ -56,10 +56,10 @@ const UserInfo = () => {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  // const sections = await db.section.findMany()
+  const sections = await db.section.findMany()
   // Pass projects to the page via props
-  // return { props: { sections } }
-  return { props: {} }
+  console.log("sections:", sections)
+  return { props: { sections } }
 }
 
 const Home: BlitzPage = () => {
@@ -67,12 +67,9 @@ const Home: BlitzPage = () => {
     <div className="container">
       <TopHeader />
       <main>
-        {/* <div className="logo">
+        <div className="logo">
           <Image src={logo} alt="blitzjs" />
-        </div> */}
-
-
-
+        </div>
       </main>
 
       <footer>
