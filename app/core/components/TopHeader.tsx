@@ -32,6 +32,8 @@ const UserInfo = () => {
           User name: <code>{currentUser.name}</code>
           <br />
           User role: <code>{currentUser.role}</code>
+          <br />
+          <Link href="/sections"><p style={{color: "#FFF", margin: "0", textAlign: "left", textDecoration: "underline", cursor: "pointer"}}>Sections</p></Link>
         </div>
       </>
     )

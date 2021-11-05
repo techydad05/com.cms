@@ -5,6 +5,7 @@ import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
 import logo from "public/logo.png"
 import TopHeader from "app/core/components/TopHeader"
+import db from "db"
 
 /*
  * This file is just for a pleasant getting started page for your new app.
@@ -51,6 +52,14 @@ const UserInfo = () => {
       </>
     )
   }
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // const sections = await db.section.findMany()
+  // Pass projects to the page via props
+  // return { props: { sections } }
+  return { props: {} }
 }
 
 const Home: BlitzPage = () => {
